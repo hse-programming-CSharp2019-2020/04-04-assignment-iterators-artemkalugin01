@@ -105,7 +105,7 @@
       "setup": "csc Iterators/Task03/Program.cs",
       "run": "mono Program.exe",
       "input": "3\r\nBanana Bill\r\nApple Alex\r\nCarrot Clark",
-      "output": "Apple A.\r\nBanana B.\r\nCarrot C.\r\n \r\nBanana B.\r\nApple A.\r\nCarrot C.",
+      "output": "Apple A.\r\nBanana B.\r\nCarrot C.\r\n\r\nBanana B.\r\nApple A.\r\nCarrot C.",
       "comparison": "included",
       "timeout": 10,
       "points": 1
