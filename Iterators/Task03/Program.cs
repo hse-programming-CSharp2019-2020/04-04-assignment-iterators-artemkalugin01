@@ -75,11 +75,7 @@ namespace Task03
             return people;
         }
 
-        /// <summary> 
-        /// Метод превращает строку в int. 
-        /// </summary> 
-        /// <param name="strs"></param> 
-        /// <returns></returns> 
+       //Преобразование строки в число с соответствующими проверками
         public static int ParseToInt()
         {
             string strs = Console.ReadLine();
@@ -88,6 +84,8 @@ namespace Task03
                 throw new ArgumentException();
             return res;
         }
+
+        
     }
 
     public class Person : IComparable
@@ -108,9 +106,18 @@ namespace Task03
             else
                 throw new Exception("Невозможно сравнить два объекта");
         }
+       
+        //Переписанный ToString для корректного вывода
         public override string ToString()
         {
-            return $"{Name} {Surname[0]}.";
+            char initial = Convert.ToChar(Surname[0]);
+            initial = Char.ToUpper(initial);
+            string newFirstName = Char.ToUpper(Name[0]).ToString();
+            for (int i = 1; i < Name.Length; i++)
+            {
+                newFirstName += Name[i];
+            }
+            return $"{newFirstName} {initial}.";
         }
     }
 

@@ -69,7 +69,7 @@ namespace Task02
         {
             get
             {
-                if (position == -1 || position > values.Length)
+                if (position == -1 || position >= values.Length)
                     throw new ArgumentException();
                 return values[position];
             }
