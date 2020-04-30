@@ -69,7 +69,7 @@ namespace Task02
         {
             get
             {
-                if (position == -1 || position >= values.Length)
+                if (position == -1 || position > values.Length)
                     throw new ArgumentException();
                 return values[position];
             }
@@ -106,6 +106,8 @@ namespace Task02
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
             try
             {
                 Console.OutputEncoding = Encoding.UTF8;
